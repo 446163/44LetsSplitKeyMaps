@@ -74,7 +74,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 /*
   ┌────┬────┬────┬────┬────┬────┐    ┌────┬────┬────┬────┬────┬────┐
-  │ }  │ Q  │ W  │ F  │ P  │ G  │    │ J  │ L  │ U  │ Y  │ +  │ ~  │
+  │ }  │ Q  │ W  │ F  │ P  │ G  │    │ J  │ L  │ U  │ Y  │ +  │ =  │
   ├────┼────┼────┼────┼────┼────┤    ├────┼────┼────┼────┼────┼────┤
   │CrTb│ A  │ R  │ S  │ T  │ D  │    │ H  │ N  │ E  │ I  │ O  │ *  │
   ├────┼────┼────┼────┼────┼────┤    ├────┼────┼────┼────┼────┼────┤
@@ -84,7 +84,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   └────┴────┴────┴────┴────┴────┘    └────┴────┴────┴────┴────┴────┘
 */
 [_SHIFT] = KEYMAP( \
-  KC_RCBR,    LSFT(KC_Q), LSFT(KC_W), LSFT(KC_F), LSFT(KC_P), LSFT(KC_G), LSFT(KC_J), LSFT(KC_L), LSFT(KC_U), LSFT(KC_Y), KC_PLUS, KC_TILD, \
+  KC_RCBR,    LSFT(KC_Q), LSFT(KC_W), LSFT(KC_F), LSFT(KC_P), LSFT(KC_G), LSFT(KC_J), LSFT(KC_L), LSFT(KC_U), LSFT(KC_Y), KC_PLUS, KC_EQL, \
   KC_TAB,  	  LSFT(KC_A), LSFT(KC_R), LSFT(KC_S), LSFT(KC_T), LSFT(KC_D), LSFT(KC_H), LSFT(KC_N), LSFT(KC_E), LSFT(KC_I), LSFT(KC_O), KC_ASTR, \
   KC_RPRN, 	  LSFT(KC_Z), LSFT(KC_X), LSFT(KC_C), LSFT(KC_V), LSFT(KC_B), LSFT(KC_K), LSFT(KC_M), KC_LT,   KC_GT,   KC_QUES, KC_UNDS, \
   TO(_LAYER), KC_RBRC, KC_LALT, KC_LGUI, KC_ESC,  KC_TRNS, KC_SPC,  KC_BSPC, KC_ENT,  KC_LEFT, KC_DOWN, KC_RGHT \
