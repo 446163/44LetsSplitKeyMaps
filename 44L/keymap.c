@@ -95,26 +95,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   └────┴────┴────┴────┴────┴────┘    └────┴────┴────┴────┴────┴────┘
 */
 [_MOD] = KEYMAP( \
-  DYN_REC_START1,    KC_EXLM, KC_DQT,   KC_HASH, KC_DLR,  KC_PERC, KC_AMPR, 		KC_QUOT, KC_LPRN, KC_RPRN, KC_TILD, KC_CIRC, \
+  KC_HOME,    KC_EXLM, KC_DQT,   KC_HASH, KC_DLR,  KC_PERC, KC_AMPR, 		KC_QUOT, KC_LPRN, KC_RPRN, KC_TILD, KC_CIRC, \
   KC_DEL,     KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,  			KC_7, 	 KC_8, 	  KC_9,    KC_0, 	KC_PIPE, \
-  DYN_REC_STOP,     KC_VOLD, KC_MRWD, KC_MPLY, KC_MFFD, KC_VOLU, DYN_MACRO_PLAY1, KC_AT, 	 KC_GRV,  KC_DOT,  KC_PGUP, KC_PGDN, \
+  KC_END,     KC_VOLD, KC_MRWD, KC_MPLY, KC_MFFD, KC_VOLU, DYN_MACRO_PLAY1, KC_AT, 	 KC_GRV,  KC_DOT,  KC_PGUP, KC_PGDN, \
   KC_NO, KC_SLEP, KC_LALT, KC_LGUI, KC_TRNS,  KC_LSFT, KC_NO,			KC_BSPC, KC_ENT,  KC_LEFT, KC_DOWN, KC_RGHT \
 ),
 /*
   ┌────┬────┬────┬────┬────┬────┐    ┌────┬────┬────┬────┬────┬────┐
   │ N  │    │    │    │    │RST │    │    │    │    │    │    │    │
   ├────┼────┼────┼────┼────┼────┤    ├────┼────┼────┼────┼────┼────┤
-  │ B  │    │    │    │    │    │    │    │    │    │    │    │    │
+  │ B  │    │    │    │ MS │    │    │    │M1P │M2P │    │    │    │
   ├────┼────┼────┼────┼────┼────┤    ├────┼────┼────┼────┼────┼────┤
-  │ C  │    │    │    │    │    │    │    │    │    │    │    │    │
+  │ C  │    │    │    │    │    │    │    │ M1 │ M2 │    │    │    │
   ├────┼────┼────┼────┼────┼────┤    ├────┼────┼────┼────┼────┼────┤
   │    │    │    │    │    │ B  │    │    │    │    │    │    │    │
   └────┴────┴────┴────┴────┴────┘    └────┴────┴────┴────┴────┴────┘
 */
 [_LAYER] = KEYMAP( \
   TO(_NUMPAD), 	KC_NO, KC_NO, KC_NO, KC_NO, RESET, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
-  TO(BTEC),  KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
-  TO(_COLEMAK), KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
+  TO(BTEC),  KC_NO, KC_NO, KC_NO, DYN_REC_STOP, KC_NO, KC_NO, DYN_MACRO_PLAY1, DYN_MACRO_PLAY2, KC_NO, KC_NO, KC_NO, \
+  TO(_COLEMAK), KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, DYN_REC_START1, DYN_REC_START2, KC_NO, KC_NO, KC_NO, \
   TO(_LAYER),   KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO \
 )};
 
