@@ -80,14 +80,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ├────┼────┼────┼────┼────┼────┤    ├────┼────┼────┼────┼────┼────┤
   │ )  │ Z  │ X  │ C  │ V  │ B  │    │ K  │ M  │ <  │ >  │ ?  │ _  │
   ├────┼────┼────┼────┼────┼────┤    ├────┼────┼────┼────┼────┼────┤
-  │ Ly │ ]  │ALT │GUI │Esc │Sft │    │SPC │BSP │ENT │ <- │ V  │ -> │
+  │    │ ]  │ALT │GUI │Esc │Sft │    │SPC │BSP │ENT │ <- │ V  │ -> │
   └────┴────┴────┴────┴────┴────┘    └────┴────┴────┴────┴────┴────┘
 */
 [_SHIFT] = KEYMAP( \
   KC_RCBR,    LSFT(KC_Q), LSFT(KC_W), LSFT(KC_F), LSFT(KC_P), LSFT(KC_G), LSFT(KC_J), LSFT(KC_L), LSFT(KC_U), LSFT(KC_Y), KC_PLUS, KC_EQL, \
   KC_TAB,  	  LSFT(KC_A), LSFT(KC_R), LSFT(KC_S), LSFT(KC_T), LSFT(KC_D), LSFT(KC_H), LSFT(KC_N), LSFT(KC_E), LSFT(KC_I), LSFT(KC_O), KC_ASTR, \
   KC_RPRN, 	  LSFT(KC_Z), LSFT(KC_X), LSFT(KC_C), LSFT(KC_V), LSFT(KC_B), LSFT(KC_K), LSFT(KC_M), KC_LT,   KC_GT,   KC_QUES, KC_UNDS, \
-  TO(_LAYER), KC_RBRC, KC_LALT, KC_LGUI, KC_ESC,  KC_TRNS, KC_SPC,  KC_BSPC, KC_ENT,  KC_LEFT, KC_DOWN, KC_RGHT \
+  KC_NO, KC_RBRC, KC_LALT, KC_LGUI, KC_ESC,  KC_NO, KC_SPC,  KC_BSPC, KC_ENT,  KC_LEFT, KC_DOWN, KC_RGHT \
 ),
 /*
   ┌────┬────┬────┬────┬────┬────┐    ┌────┬────┬────┬────┬────┬────┐
@@ -97,14 +97,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ├────┼────┼────┼────┼────┼────┤    ├────┼────┼────┼────┼────┼────┤
   │END │ Pt │ Vd │ Pp │ Vu │ Nt │    │ MP │ @  │ `  │ .  │ PU │ PD │
   ├────┼────┼────┼────┼────┼────┤    ├────┼────┼────┼────┼────┼────┤
-  │ Ly │SLP │ALT │GUI │Esc │Sft │    │SPC │BSP │ENT │ <- │ V  │ -> │
+  │    │SLP │ALT │GUI │Esc │Sft │    │SPC │BSP │ENT │ <- │ V  │ -> │
   └────┴────┴────┴────┴────┴────┘    └────┴────┴────┴────┴────┴────┘
 */
 [_MOD] = KEYMAP( \
   KC_HOME,    KC_EXLM, KC_DQT,   KC_HASH, KC_DLR,  KC_PERC, KC_AMPR, 		KC_QUOT, KC_LPRN, KC_RPRN, KC_TILD, KC_CIRC, \
   KC_DEL,     KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,  			KC_7, 	 KC_8, 	  KC_9,    KC_0, 	KC_PIPE, \
   KC_END,     KC_VOLD, KC_MRWD, KC_MPLY, KC_MFFD, KC_VOLU, DYN_MACRO_PLAY1, KC_AT, 	 KC_GRV,  KC_DOT,  KC_PGUP, KC_PGDN, \
-  TO(_LAYER), KC_SLEP, KC_LALT, KC_LGUI, KC_TRNS,  KC_LSFT, KC_SPC,			KC_BSPC, KC_ENT,  KC_LEFT, KC_DOWN, KC_RGHT \
+  KC_NO, KC_SLEP, KC_LALT, KC_LGUI, KC_TRNS,  KC_LSFT, KC_NO,			KC_BSPC, KC_ENT,  KC_LEFT, KC_DOWN, KC_RGHT \
 ),
 /*
   ┌────┬────┬────┬────┬────┬────┐    ┌────┬────┬────┬────┬────┬────┐
@@ -112,22 +112,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ├────┼────┼────┼────┼────┼────┤    ├────┼────┼────┼────┼────┼────┤
   │ Q  │    │    │    │    │    │    │    │    │    │    │    │    │
   ├────┼────┼────┼────┼────┼────┤    ├────┼────┼────┼────┼────┼────┤
-  │ C  │ MS │    │    │    │    │    │    │    │    │    │    │    │
+  │ C  │    │    │    │    │    │    │    │    │    │    │    │    │
   ├────┼────┼────┼────┼────┼────┤    ├────┼────┼────┼────┼────┼────┤
-  │    │ MR │    │    │    │ B  │    │    │    │    │    │    │    │
+  │    │    │    │    │    │ B  │    │    │    │    │    │    │    │
   └────┴────┴────┴────┴────┴────┘    └────┴────┴────┴────┴────┴────┘
 */
 [_LAYER] = KEYMAP( \
   TO(_NUMPAD), 	KC_NO, KC_NO, KC_NO, KC_NO, RESET, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
   TO(BTEC),  KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
-  TO(_COLEMAK), DYN_REC_STOP, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
-  TO(_LAYER),   DYN_REC_START1, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO \
+  TO(_COLEMAK), KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
+  TO(_LAYER),   KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO \
 )};
-
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-	if (!process_record_dynamic_macro(keycode, record)) {
-        return false;
-    }
-	return true;
-}
-
