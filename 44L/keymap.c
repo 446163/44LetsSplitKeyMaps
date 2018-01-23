@@ -95,7 +95,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ├────┼────┼────┼────┼────┼────┤    ├────┼────┼────┼────┼────┼────┤
   │CrTb│ 1  │ 2  │ 3  │ 4  │ 5  │    │ 6  │ 7  │ 8  │ 9  │ 0  │ |  │
   ├────┼────┼────┼────┼────┼────┤    ├────┼────┼────┼────┼────┼────┤
-  │END │ Pt │ Vd │ Pp │ Vu │ Nt │    │ MP │ @  │ `  │ .  │ PU │ PD │
+  │END │ Pt │ Vd │ Pp │ Vu │ Nt │    │SLP │ @  │ `  │ .  │ PU │ PD │
   ├────┼────┼────┼────┼────┼────┤    ├────┼────┼────┼────┼────┼────┤
   │    │SLP │ALT │GUI │Esc │Sft │    │SPC │BSP │ENT │ <- │ V  │ -> │
   └────┴────┴────┴────┴────┴────┘    └────┴────┴────┴────┴────┴────┘
@@ -110,7 +110,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ┌────┬────┬────┬────┬────┬────┐    ┌────┬────┬────┬────┬────┬────┐
   │ N  │    │    │    │    │RST │    │    │    │    │    │    │    │
   ├────┼────┼────┼────┼────┼────┤    ├────┼────┼────┼────┼────┼────┤
-  │ Q  │    │    │    │    │    │    │    │    │    │    │    │    │
+  │ B  │    │    │    │    │    │    │    │ TO │ TF │    │    │    │
   ├────┼────┼────┼────┼────┼────┤    ├────┼────┼────┼────┼────┼────┤
   │ C  │    │    │    │    │    │    │    │    │    │    │    │    │
   ├────┼────┼────┼────┼────┼────┤    ├────┼────┼────┼────┼────┼────┤
@@ -119,7 +119,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 */
 [_LAYER] = KEYMAP( \
   TO(_NUMPAD), 	KC_NO, KC_NO, KC_NO, KC_NO, RESET, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
-  TO(BTEC),  KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
+  TO(BTEC),  KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, TERM_ON, TERM_OFF, KC_NO, KC_NO, KC_NO, \
   TO(_COLEMAK), KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
   TO(_LAYER),   KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO \
 )};
