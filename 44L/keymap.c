@@ -5,10 +5,6 @@
 
 extern keymap_config_t keymap_config;
 
-// Each layer gets a name for readability, which is then used in the keymap matrix below.
-// The underscores don't mean anything - you can have a layer called STUFF or any other name.
-// Layer names don't all need to be of the same length, obviously, and you can also skip them
-// entirely and just use numbers.
 #define _COLEMAK 0
 #define _BTEC 1
 #define _NUMPAD 2
@@ -26,9 +22,7 @@ enum custom_keycodes {
   DYNAMIC_MACRO_RANGE,
 };
 
-// Fillers to make layering more clear
-#define ____ KC_TRNS
-#define XXXX KC_NO
+#include "dynamic_macro.h"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /*
@@ -101,16 +95,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   └────┴────┴────┴────┴────┴────┘    └────┴────┴────┴────┴────┴────┘
 */
 [_MOD] = KEYMAP( \
-  KC_HOME,    KC_EXLM, KC_DQT,   KC_HASH, KC_DLR,  KC_PERC, KC_AMPR, 		KC_QUOT, KC_LPRN, KC_RPRN, KC_TILD, KC_CIRC, \
+  DYN_REC_START1,    KC_EXLM, KC_DQT,   KC_HASH, KC_DLR,  KC_PERC, KC_AMPR, 		KC_QUOT, KC_LPRN, KC_RPRN, KC_TILD, KC_CIRC, \
   KC_DEL,     KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,  			KC_7, 	 KC_8, 	  KC_9,    KC_0, 	KC_PIPE, \
-  KC_END,     KC_VOLD, KC_MRWD, KC_MPLY, KC_MFFD, KC_VOLU, KC_SYSTEM_SLEEP, KC_AT, 	 KC_GRV,  KC_DOT,  KC_PGUP, KC_PGDN, \
+  DYN_REC_STOP,     KC_VOLD, KC_MRWD, KC_MPLY, KC_MFFD, KC_VOLU, DYN_MACRO_PLAY, KC_AT, 	 KC_GRV,  KC_DOT,  KC_PGUP, KC_PGDN, \
   KC_NO, KC_SLEP, KC_LALT, KC_LGUI, KC_TRNS,  KC_LSFT, KC_NO,			KC_BSPC, KC_ENT,  KC_LEFT, KC_DOWN, KC_RGHT \
 ),
 /*
   ┌────┬────┬────┬────┬────┬────┐    ┌────┬────┬────┬────┬────┬────┐
   │ N  │    │    │    │    │RST │    │    │    │    │    │    │    │
   ├────┼────┼────┼────┼────┼────┤    ├────┼────┼────┼────┼────┼────┤
-  │ B  │    │    │    │    │    │    │    │ TO │ TF │    │    │    │
+  │ B  │    │    │    │    │    │    │    │    │    │    │    │    │
   ├────┼────┼────┼────┼────┼────┤    ├────┼────┼────┼────┼────┼────┤
   │ C  │    │    │    │    │    │    │    │    │    │    │    │    │
   ├────┼────┼────┼────┼────┼────┤    ├────┼────┼────┼────┼────┼────┤
@@ -119,7 +113,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 */
 [_LAYER] = KEYMAP( \
   TO(_NUMPAD), 	KC_NO, KC_NO, KC_NO, KC_NO, RESET, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
-  TO(BTEC),  KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, TERM_ON, TERM_OFF, KC_NO, KC_NO, KC_NO, \
+  TO(BTEC),  KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
   TO(_COLEMAK), KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
   TO(_LAYER),   KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO \
 )};
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+	if (!process_record_dynamic_macro(keycode, record)) {
+		return false;
+	}
+}
+
