@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_NO,  KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO, \
   KC_NO,  KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO, KC_NO, \
   KC_NO, KC_NO,    KC_NO,    LGUI(KC_C),    KC_NO,    KC_NO,    KC_NO,    KC_NO,    LGUI(KC_V), KC_NO,  KC_NO, KC_NO, \
-  TO(_LAYER),KC_NO,  KC_NO, KC_NO,  KC_NO,   KC_NO,  KC_NO,  KC_NO,   KC_NO, KC_NO, KC_NO, KC_NO   \
+  KC_NO,KC_NO,  KC_NO, KC_NO,  KC_NO,   KC_NO,  KC_NO,  KC_NO,   KC_NO, KC_NO, KC_NO, KC_NO   \
 ),
 /*
   ┌────┬────┬────┬────┬────┬────┐    ┌────┬────┬────┬────┬────┬────┐
