@@ -135,7 +135,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   TO(_BTEC),    KC_NO, KC_NO, KC_NO, KC_NO,   KC_NO,   KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
   TO(_COLEMAK), KC_NO, KC_NO, KC_NO, KC_NO,   KC_NO,   KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
   TO(_LAYER),   KC_NO, KC_NO, KC_NO, KC_TRNS, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO \
-)}
+)};
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	if (!process_record_dynamic_macro(keycode, record)) {
