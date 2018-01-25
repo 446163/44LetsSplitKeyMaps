@@ -104,7 +104,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ┌────┬────┬────┬────┬────┬────┐    ┌────┬────┬────┬────┬────┬────┐
   │ N  │    │    │    │    │RST │    │    │ BD │ BD │    │    │    │
   ├────┼────┼────┼────┼────┼────┤    ├────┼────┼────┼────┼────┼────┤
-  │ B  │    │    │    │ MS │    │    │    │M1P │M2P │    │    │    │
+  │CAPS│    │    │    │ MS │    │    │    │M1P │M2P │    │    │    │
   ├────┼────┼────┼────┼────┼────┤    ├────┼────┼────┼────┼────┼────┤
   │ C  │    │    │    │    │    │    │    │ M1 │ M2 │    │    │    │
   ├────┼────┼────┼────┼────┼────┤    ├────┼────┼────┼────┼────┼────┤
@@ -113,9 +113,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 */
 [_LAYER] = KEYMAP( \
   TO(_NUMPAD), 	KC_NO, KC_NO, KC_NO, KC_NO, RESET, KC_NO, KC_SLCK, KC_PAUS, KC_NO, KC_NO, KC_NO, \
-  TO(_BTEC),  KC_NO, KC_NO, KC_NO, DYN_REC_STOP, KC_NO, KC_NO, DYN_MACRO_PLAY1, DYN_MACRO_PLAY2, KC_NO, KC_NO, KC_NO, \
+  KC_CAPS,  KC_NO, KC_NO, KC_NO, DYN_REC_STOP, KC_NO, KC_NO, DYN_MACRO_PLAY1, DYN_MACRO_PLAY2, KC_NO, KC_NO, KC_NO, \
   TO(_COLEMAK), KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, DYN_REC_START1, DYN_REC_START2, KC_NO, KC_NO, KC_NO, \
-  TO(_LAYER),   KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO \
+  TO(_LAYER),   KC_NO, KC_NO, KC_NO, KC_NO, TO(_BTEC), KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO \
 )};
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
