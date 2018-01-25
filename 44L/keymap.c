@@ -114,10 +114,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   └────┴────┴────┴────┴────┴────┘    └────┴────┴────┴────┴────┴────┘
 */
 [_MACRO] = KEYMAP( \
-  KC_NO,   KC_NO, KC_NO, KC_NO, KC_NO,        KC_NO, KC_NO, KC_SLCK,         KC_PAUS,         KC_NO, KC_NO, KC_NO, \
-  KC_CAPS, KC_NO, KC_NO, KC_NO, DYN_REC_STOP, KC_NO, KC_NO, DYN_MACRO_PLAY1, DYN_MACRO_PLAY2, KC_NO, KC_NO, KC_NO, \
-  KC_NO,   KC_NO, KC_NO, KC_NO, KC_NO,        KC_NO, KC_NO, DYN_REC_START1,  DYN_REC_START2,  KC_NO, KC_NO, KC_NO, \
-  KC_NO,   KC_NO, KC_NO, KC_NO, KC_NO,        KC_NO, KC_NO, KC_NO,           KC_NO,           KC_NO, KC_NO, KC_NO \
+  KC_NO,   KC_NO, KC_NO, KC_NO, KC_NO,        KC_NO,   KC_NO,   KC_SLCK,         KC_PAUS,         KC_NO, KC_NO, KC_NO, \
+  KC_CAPS, KC_NO, KC_NO, KC_NO, DYN_REC_STOP, KC_NO,   KC_NO,   DYN_MACRO_PLAY1, DYN_MACRO_PLAY2, KC_NO, KC_NO, KC_NO, \
+  KC_NO,   KC_NO, KC_NO, KC_NO, KC_NO,        KC_NO,   KC_NO,   DYN_REC_START1,  DYN_REC_START2,  KC_NO, KC_NO, KC_NO, \
+  KC_NO,   KC_NO, KC_NO, KC_NO, KC_NO,        KC_TRNS, KC_TRNS, KC_NO,           KC_NO,           KC_NO, KC_NO, KC_NO \
 ),
 /*
   ┌────┬────┬────┬────┬────┬────┐    ┌────┬────┬────┬────┬────┬────┐
